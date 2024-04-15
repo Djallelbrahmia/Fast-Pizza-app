@@ -1,5 +1,10 @@
+import { useSelector } from "react-redux";
+
 function Username() {
-  return <div className="hidden text-sm font-semibold md:block">Djallel</div>;
+  const userName = useSelector((state) => state.user.username);
+  return (
+    <div className="hidden text-sm font-semibold md:block">{userName}</div>
+  );
 }
 
 export default Username;
